@@ -41,6 +41,17 @@ this graphs shows the amount of drinks students in different parts of a class dr
 
 ## Inferential Tests
 
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+this graph shows a significant result, because the number are much smaller then 0.05.
+
+```{r}
+plot(TukeyHSD(model1))
+```
+this graph shows the amount of differences each sits drink. letting the viewer realized that both the student in the front of the class and the students in the middle of the class are drink about the same as each other not one of them over does it, however the students in the back of the class completely take over the amount drink-ed by both front and middle seats.
+
 ## Conclusions
 
 
