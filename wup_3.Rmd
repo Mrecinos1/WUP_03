@@ -30,13 +30,14 @@ basicCN + geom_boxplot()
 
  From what the graph shows we are able to see that the box for students sitting in the back if the class is much bigger then those who seat in the front and middle, leading to the understanding the students who sit in the back are more likely to pick up alcohol.
  
-### get fancy  
-
-```{r}
-basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="Fancy notch boxplot \n with 2 lines")
-```
 
 ## Numerical Summarys 
+
+```{r}
+favstats(alcohol~Seat,data=ucdavis1)
+```
+
+this graphs shows the amount of drinks students in different parts of a class drink per week, showing that the students in the back of the class drink much more then both the students in the front and middle of the class. with students in the front drinking  1.78... drinks, the students in the middle drinking only 3.33... drink and the students in the back taking the largest number drinking 8.55... drinks pre week.
 
 ## Inferential Tests
 
